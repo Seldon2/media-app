@@ -1,9 +1,13 @@
-import React from 'react'
+import { categories } from "../constants";
+import fetchNews from "../lib/fetchNews";
 
-function page() {
+async function page() {
+  const news: NewsResponse = await fetchNews(categories.join(','));
   return (
-    <div>page</div>
+    <div>
+
+    </div>
   )
 }
 
-export default page
+export default page;
